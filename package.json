@@ -1,14 +1,63 @@
 {
-  "name": "design-system",
-  "version": "0.0.0",
+  "name": "@nectar/design-system",
+  "version": "0.1.0",
+  "description": "Nectar Angular Design System - Production-ready UI components for Angular applications",
+  "license": "MIT",
+  "author": "Nectar Team",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nectar-org/design-system"
+  },
+  "homepage": "https://github.com/nectar-org/design-system#readme",
+  "bugs": {
+    "url": "https://github.com/nectar-org/design-system/issues"
+  },
+  "main": "dist/fesm2022/nectar-design-system.mjs",
+  "types": "dist/types/nectar-design-system.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/fesm2022/nectar-design-system.mjs",
+      "types": "./dist/types/nectar-design-system.d.ts"
+    },
+    "./button": {
+      "import": "./dist/fesm2022/nectar-design-system.mjs",
+      "types": "./dist/types/nectar-design-system.d.ts"
+    },
+    "./card": {
+      "import": "./dist/fesm2022/nectar-design-system.mjs",
+      "types": "./dist/types/nectar-design-system.d.ts"
+    },
+    "./input": {
+      "import": "./dist/fesm2022/nectar-design-system.mjs",
+      "types": "./dist/types/nectar-design-system.d.ts"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "angular",
+    "design-system",
+    "components",
+    "ui",
+    "nectar",
+    "button",
+    "card",
+    "input",
+    "form"
+  ],
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "build:lib": "ng build --configuration production",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test",
+    "test": "ng test --watch=false",
+    "test:watch": "ng test",
     "storybook": "ng run design-system:storybook",
-    "build-storybook": "ng run design-system:build-storybook"
+    "build-storybook": "ng run design-system:build-storybook",
+    "lint": "ng lint"
   },
   "prettier": {
     "printWidth": 100,
@@ -22,33 +71,39 @@
       }
     ]
   },
-  "private": true,
-  "packageManager": "npm@10.9.4",
-  "dependencies": {
-    "@angular/common": "^21.1.0",
-    "@angular/compiler": "^21.1.0",
-    "@angular/core": "^21.1.0",
-    "@angular/forms": "^21.1.0",
-    "@angular/platform-browser": "^21.1.0",
-    "@angular/router": "^21.1.0",
-    "rxjs": "~7.8.0",
-    "tslib": "^2.3.0"
+  "peerDependencies": {
+    "@angular/animations": "^19.0.0 || ^20.0.0 || ^21.0.0",
+    "@angular/common": "^19.0.0 || ^20.0.0 || ^21.0.0",
+    "@angular/compiler": "^19.0.0 || ^20.0.0 || ^21.0.0",
+    "@angular/core": "^19.0.0 || ^20.0.0 || ^21.0.0",
+    "@angular/forms": "^19.0.0 || ^20.0.0 || ^21.0.0",
+    "@angular/platform-browser": "^19.0.0 || ^20.0.0 || ^21.0.0",
+    "rxjs": "^7.0.0",
+    "tslib": "^2.0.0",
+    "zone.js": "^0.14.0 || ^0.15.0"
   },
+  "peerDependenciesMeta": {
+    "@angular/animations": {
+      "optional": true
+    }
+  },
+  "packageManager": "npm@10.9.4",
   "devDependencies": {
+    "@angular-devkit/architect": "^0.2101.0",
+    "@angular-devkit/build-angular": "^21.1.0",
+    "@angular-devkit/core": "^21.1.0",
     "@angular/build": "^21.1.0",
     "@angular/cli": "^21.1.0",
     "@angular/compiler-cli": "^21.1.0",
-    "@storybook/angular": "^10.1.11",
-    "jsdom": "^27.1.0",
-    "typescript": "~5.9.2",
-    "vitest": "^4.0.8",
-    "storybook": "^10.1.11",
+    "@angular/platform-browser-dynamic": "^21.1.0",
+    "@compodoc/compodoc": "^1.2.0",
     "@storybook/addon-a11y": "^10.1.11",
     "@storybook/addon-docs": "^10.1.11",
-    "@angular-devkit/build-angular": "^21.1.0",
-    "@angular-devkit/architect": "^0.2101.0",
-    "@angular-devkit/core": "^21.1.0",
-    "@angular/platform-browser-dynamic": "^21.1.0",
-    "@compodoc/compodoc": "^1.2.0"
+    "@storybook/angular": "^10.1.11",
+    "jsdom": "^27.1.0",
+    "ng-packagr": "^21.1.0",
+    "storybook": "^10.1.11",
+    "typescript": "~5.9.2",
+    "vitest": "^4.0.8"
   }
 }

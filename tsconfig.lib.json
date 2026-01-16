@@ -1,0 +1,26 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "outDir": "./out-tsc/lib",
+    "target": "ES2020",
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
+    "inlineSources": true,
+    "types": [],
+    "lib": [
+      "ES2020",
+      "DOM"
+    ]
+  },
+  "exclude": [
+    "src/main.ts",
+    "src/polyfills.ts",
+    "src/test.ts",
+    "**/*.spec.ts",
+    "**/*.stories.ts"
+  ],
+  "include": [
+    "src/**/*.ts"
+  ]
+}

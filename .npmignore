@@ -1,0 +1,54 @@
+# Development
+src/
+.storybook/
+.angular/
+.browserslistrc
+.editorconfig
+.gitignore
+.prettierignore
+.prettierrc
+karma.conf.js
+tsconfig.app.json
+tsconfig.spec.json
+tsconfig.json
+
+# Testing
+*.spec.ts
+*.stories.ts
+
+# Documentation
+*.md
+!README.md
+SETUP_*.md
+QUICK_START.md
+PROJECT_GUIDE.md
+DESIGN_SYSTEM_README.md
+START_HERE.txt
+SETUP_COMPLETE.md
+SETUP_SUMMARY.md
+
+# Version control
+.git
+.gitattributes
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Dependencies
+node_modules/
+package-lock.json
+npm-debug.log
+yarn-error.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Build
+.angular/
+dist/
+build/
